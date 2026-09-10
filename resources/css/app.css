@@ -1,0 +1,98 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+
+    /* Maieutic brand — teal family (educational) */
+    --color-brand-mint: #15D9A1;
+    --color-brand-ice: #C1FAFB;
+    --color-brand-aqua: #69FFF7;
+    --color-brand-teal: #008680;
+    --color-brand-deep: #00615C;
+    --color-brand-abyss: #003D3A;
+
+    /* Maieutic brand — red sea family (corporate) */
+    --color-brand-sand: #FEF1DE;
+    --color-brand-peach: #F2AA84;
+    --color-brand-coral: #F8847E;
+    --color-brand-red: #A31009;
+    --color-brand-rust: #800D07;
+    --color-brand-ember: #4F0703;
+
+    /* Neutral ground */
+    --color-ink-900: #07100F;
+    --color-ink-800: #0C1817;
+    --color-ink-700: #142322;
+    --color-ink-600: #1E3230;
+}
+
+@layer base {
+    /* The public site reads light: white page, ink text, and the brand colour
+       carried by the tile artwork rather than the background. The studio keeps
+       its dark ground, set on its own layout. */
+    body {
+        background-color: #FFFFFF;
+        color: var(--color-ink-900);
+        -webkit-font-smoothing: antialiased;
+    }
+}
+
+@layer utilities {
+    /* Tiles fade in as the grid re-filters. */
+    
+
+    
+
+    /* Hero aurora. Three blurred brand discs on long, offset drifts, so the
+       white page is never completely still without ever calling attention
+       to itself. */
+    @keyframes hero-drift {
+        0%   { transform: translate3d(0, 0, 0) scale(1); }
+        50%  { transform: translate3d(4%, -6%, 0) scale(1.12); }
+        100% { transform: translate3d(0, 0, 0) scale(1); }
+    }
+
+    .hero-drift-one   { animation: hero-drift 19s ease-in-out infinite; }
+    .hero-drift-two   { animation: hero-drift 23s ease-in-out -7s infinite reverse; }
+    .hero-drift-three { animation: hero-drift 27s ease-in-out -13s infinite; }
+
+    /* Fine film grain laid over the tile gradients so they read as printed
+       posters rather than flat CSS fills. Pure SVG turbulence — no asset. */
+    
+
+    /* Header client wall. The track holds two copies of the row, so sliding
+       exactly half its width loops seamlessly. */
+    
+
+    
+
+    
+
+    /* Sections and cards rise once as they enter the viewport. The delay is a
+       custom property so a element can stagger itself inline without needing
+       a class per position. */
+    .reveal {
+        opacity: 0;
+        transform: translateY(18px);
+        transition:
+            opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay, 0ms),
+            transform 0.7s cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay, 0ms);
+    }
+
+    .reveal.is-revealed {
+        opacity: 1;
+        transform: none;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .hero-drift-one,
+        .hero-drift-two,
+        .hero-drift-three { animation: none; }
+
+        .reveal { opacity: 1; transform: none; transition: none; }
+    }
+}
