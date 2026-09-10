@@ -5,17 +5,27 @@
     when the source is a pasted URL, and states plainly that footage is pending
     rather than pretending otherwise.
 --}}
+{{-- The splash follows the cursor: pointer position is written straight to two
+     custom properties, so the wash tracks the hand without a re-render. --}}
 <figure
-    class="reveal group relative overflow-hidden rounded-2xl bg-ink-900 ring-1 ring-ink-900/10 transition duration-500 hover:-translate-y-1 hover:shadow-2xl"
+    class="reveal group relative overflow-hidden rounded-2xl bg-ink-900 ring-1 ring-ink-900/10 transition duration-500 ease-out hover:-translate-y-1.5 hover:shadow-2xl hover:ring-ink-900/20"
+    style="--from: {{ $service->accent_from }}; --to: {{ $service->accent_to }}"
+    x-data
+    x-on:pointermove="
+        const r = $el.getBoundingClientRect();
+        $el.style.setProperty('--x', (($event.clientX - r.left) / r.width * 100) + '%');
+        $el.style.setProperty('--y', (($event.clientY - r.top) / r.height * 100) + '%');
+    "
     @if ($sample->isUploaded())
-        x-data
         x-on:pointerenter="if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) $refs.film?.play()"
         x-on:pointerleave="if ($refs.film) { $refs.film.pause(); $refs.film.currentTime = 0 }"
     @endif
 >
     <div class="relative aspect-video w-full overflow-hidden">
         <span aria-hidden="true" class="absolute inset-0 opacity-90" style="background: {{ $service->gradient() }}"></span>
+        <span aria-hidden="true" class="sample-splash absolute inset-0 mix-blend-screen"></span>
         <span aria-hidden="true" class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent"></span>
+        <span aria-hidden="true" class="sample-shine pointer-events-none absolute inset-0"></span>
 
         @if ($sample->isUploaded())
             <video
@@ -56,7 +66,7 @@
 
     <figcaption class="flex items-start justify-between gap-4 bg-white p-5">
         <div class="min-w-0">
-            <p class="truncate font-semibold text-ink-900">{{ $sample->title }}</p>
+            <p class="truncate font-semibold text-ink-900 transition-colors duration-300 group-hover:text-brand-teal">{{ $sample->title }}</p>
             @if ($sample->client)
                 <p class="mt-0.5 truncate text-sm text-ink-900/50">{{ $sample->client }}</p>
             @endif

@@ -35,10 +35,12 @@
         @foreach ($services as $index => $service)
             <section
                 id="{{ $service->slug }}"
-                class="scroll-mt-8 border-b border-ink-900/10 py-20 sm:py-28 {{ $index % 2 ? 'bg-ink-900/[0.02]' : '' }}"
+                class="relative isolate scroll-mt-8 overflow-hidden border-b border-ink-900/10 py-20 sm:py-28 {{ $index % 2 ? 'bg-ink-900/[0.02]' : '' }}"
                 aria-labelledby="{{ $service->slug }}-title"
             >
-                <div class="mx-auto max-w-6xl px-5 sm:px-8">
+                <x-service-motif :service="$service" />
+
+                <div class="relative mx-auto max-w-6xl px-5 sm:px-8">
                     <div class="reveal grid gap-8 lg:grid-cols-[1fr_1.15fr] lg:items-end lg:gap-16">
                         <div>
                             <span class="flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-ink-900/35">
