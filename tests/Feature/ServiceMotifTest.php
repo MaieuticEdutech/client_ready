@@ -42,13 +42,20 @@ it('renders a motif for every section on the page', function () {
 });
 
 it('lacquers every card with a gloss layer', function () {
+    // The hero's stats strip reuses the card treatment, so the page carries
+    // gloss layers before any sample exists. Measure that baseline first and
+    // assert each sample card adds one on top of it.
+    $bare = $this->get('/')->getContent();
+    $glossBaseline = substr_count($bare, 'sample-gloss');
+    $shineBaseline = substr_count($bare, 'sample-shine');
+
     $service = Service::factory()->create();
     Sample::factory()->for($service)->count(2)->create();
 
     $html = $this->get('/')->getContent();
 
-    expect(substr_count($html, 'sample-gloss'))->toBe(2)
-        ->and(substr_count($html, 'sample-shine'))->toBe(2);
+    expect(substr_count($html, 'sample-gloss'))->toBe($glossBaseline + 2)
+        ->and(substr_count($html, 'sample-shine'))->toBe($shineBaseline + 2);
 });
 
 it('washes a card with its service colour under the cursor', function () {
