@@ -172,6 +172,18 @@
     .motif-panel-4 { animation-delay: 1.5s; }
     .motif-sketch  { stroke-dasharray: 220; animation: motif-draw 5s ease-in-out infinite alternate; }
 
+    /* Swayam: a lecture screen with its signal rippling out, the play mark breathing. */
+    @keyframes motif-ripple {
+        0%   { opacity: 0; transform: scale(0.6); }
+        40%  { opacity: 0.9; }
+        100% { opacity: 0; transform: scale(1.25); }
+    }
+
+    .motif-wave      { transform-origin: 156px 58px; animation: motif-ripple 3.6s ease-out infinite; }
+    .motif-wave-2    { animation-delay: 0.6s; }
+    .motif-wave-3    { animation-delay: 1.2s; }
+    .motif-play-mark { transform-box: fill-box; transform-origin: center; animation: motif-pulse 2.6s ease-in-out infinite; }
+
     /* Motion graphics: bars keep time against a slow orbit. */
     @keyframes motif-bounce {
         0%, 100% { transform: scaleY(0.45); }
@@ -266,7 +278,7 @@
 
         .motif-ring, .motif-branch, .motif-node, .motif-arc, .motif-plot, .motif-dot,
         .motif-frame, .motif-stroke, .motif-cell, .motif-scan, .motif-panel, .motif-sketch,
-        .motif-bar, .motif-orbit, .about-orbit, .sample-shine { animation: none; }
+        .motif-bar, .motif-orbit, .motif-wave, .motif-play-mark, .about-orbit, .sample-shine { animation: none; }
 
         .motif-splash, .motif-art, .sample-splash { transition: none; }
     }

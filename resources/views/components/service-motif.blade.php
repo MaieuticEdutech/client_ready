@@ -4,7 +4,8 @@
     A motif per service, built from the discipline itself rather than from
     decoration: branching nodes for Articulate, sweeping arcs for infographics,
     onion-skinned frames for animation, a resolving sample grid for AI,
-    sequenced panels for smart boards, kinetic bars for motion graphics.
+    sequenced panels for smart boards, kinetic bars for motion graphics,
+    a lecture screen with its signal rippling out for Swayam.
 
     All geometry and CSS keyframes - no asset, no dependency - and each inherits
     the service's own two stops so no two sections share a palette.
@@ -75,6 +76,16 @@
                     <rect class="motif-panel motif-panel-4" x="106" y="118" width="64" height="46" rx="5" />
                 </g>
                 <path class="motif-sketch" d="M36 94c10-20 22-26 34-12M116 94c12-16 24-14 34 4M36 154c12-14 22-16 34-6M116 154c10-18 24-18 34 0" opacity="0.7" />
+                @break
+
+            @case('swayam')
+                {{-- A lecture screen with its signal rippling out, the play mark breathing --}}
+                <rect class="motif-screen" x="44" y="58" width="112" height="72" rx="8" />
+                <path d="M100 130v18M76 150h48" />
+                <path class="motif-play-mark" d="M92 82v24l20-12Z" fill="currentColor" stroke="none" />
+                <path class="motif-wave motif-wave-1" d="M156 40a18 18 0 0 1 18 18" />
+                <path class="motif-wave motif-wave-2" d="M156 26a32 32 0 0 1 32 32" opacity="0.7" />
+                <path class="motif-wave motif-wave-3" d="M156 12a46 46 0 0 1 46 46" opacity="0.45" />
                 @break
 
             @default

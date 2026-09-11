@@ -50,6 +50,11 @@ export const videos = [
     // ── Motion Graphics ─────────────────────────────────────────────────────
     { service: 'motion-graphics', title: 'Title sequence', client: '', duration: '', src: '', poster: '' },
     { service: 'motion-graphics', title: 'Data explainer', client: '', duration: '', src: '', poster: '' },
+
+    // Swayam
+    { service: 'swayam', title: 'Studio lecture capture', client: '', duration: '', src: '', poster: '' },
+    { service: 'swayam', title: 'Course trailer', client: '', duration: '', src: '', poster: '' },
+    { service: 'swayam', title: 'Multi-camera session', client: '', duration: '', src: '', poster: '' },
 ]
 
 /**
@@ -64,7 +69,7 @@ export const stats = [
 ]
 
 /**
- * The six lines of work. Order here is the order on the page. Each carries
+ * The seven lines of work. Order here is the order on the page. Each carries
  * its own two colour stops, used for the section accent and the card washes.
  */
 export const services = [
@@ -109,6 +114,13 @@ export const services = [
         tagline: 'Type, data and identity in motion',
         description: 'Titles, lower thirds, data visualisation and brand systems in motion, for films that need to look like they belong to someone.',
         accent: ['#FEF1DE', '#A31009'],
+    },
+    {
+        slug: 'swayam',
+        name: 'Swayam',
+        tagline: 'MOOC lectures, produced to broadcast standard',
+        description: 'End-to-end production for SWAYAM and MOOC courses: studio-recorded lectures, multi-camera sessions and screen capture, edited, captioned and packaged to platform specification.',
+        accent: ['#C1FAFB', '#00615C'],
     },
 ]
 

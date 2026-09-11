@@ -16,6 +16,7 @@ it('gives each discipline its own motif', function (string $name, string $marker
     ['AI Videos', 'motif-cell'],
     ['Smart Board', 'motif-panel'],
     ['Motion Graphics', 'motif-bar'],
+    ['Swayam', 'motif-wave'],
 ]);
 
 it('tints a motif with its own service colours', function () {

@@ -96,6 +96,14 @@ const motifs = {
         </g>
         <path class="motif-sketch" d="M36 94c10-20 22-26 34-12M116 94c12-16 24-14 34 4M36 154c12-14 22-16 34-6M116 154c10-18 24-18 34 0" opacity="0.7" />`,
 
+    'swayam': () => `
+        <rect class="motif-screen" x="44" y="58" width="112" height="72" rx="8" />
+        <path d="M100 130v18M76 150h48" />
+        <path class="motif-play-mark" d="M92 82v24l20-12Z" fill="currentColor" stroke="none" />
+        <path class="motif-wave motif-wave-1" d="M156 40a18 18 0 0 1 18 18" />
+        <path class="motif-wave motif-wave-2" d="M156 26a32 32 0 0 1 32 32" opacity="0.7" />
+        <path class="motif-wave motif-wave-3" d="M156 12a46 46 0 0 1 46 46" opacity="0.45" />`,
+
     'motion-graphics': () => {
         const bars = [46, 72, 98, 124, 150]
             .map((x, i) => `<rect class="motif-bar" x="${x}" y="70" width="14" height="60" rx="7" fill="currentColor" stroke="none" style="--i: ${i}" />`)

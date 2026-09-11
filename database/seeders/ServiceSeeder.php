@@ -10,7 +10,7 @@ use Illuminate\Support\Str;
 class ServiceSeeder extends Seeder
 {
     /**
-     * The six lines of work, each with placeholder sample slots. A sample is a
+     * The seven lines of work, each with placeholder sample slots. A sample is a
      * title, or a [category, title] pair when the service splits its work under
      * sub-headings. Real footage drops into these rows through the studio;
      * nothing here invents a client.
@@ -64,6 +64,13 @@ class ServiceSeeder extends Seeder
             'description' => 'Titles, lower thirds, data visualisation and brand systems in motion, for films that need to look like they belong to someone.',
             'accent' => ['#FEF1DE', '#A31009'],
             'samples' => ['Title sequence', 'Data explainer', 'Brand toolkit'],
+        ],
+        [
+            'name' => 'Swayam',
+            'tagline' => 'MOOC lectures, produced to broadcast standard',
+            'description' => 'End-to-end production for SWAYAM and MOOC courses: studio-recorded lectures, multi-camera sessions and screen capture, edited, captioned and packaged to platform specification.',
+            'accent' => ['#C1FAFB', '#00615C'],
+            'samples' => ['Studio lecture capture', 'Course trailer', 'Multi-camera session'],
         ],
     ];
 

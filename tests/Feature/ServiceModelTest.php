@@ -38,10 +38,10 @@ it('deletes samples with their service', function () {
     expect(Sample::count())->toBe(0);
 });
 
-it('seeds the six lines of work exactly once', function () {
+it('seeds the seven lines of work exactly once', function () {
     $this->seed(ServiceSeeder::class);
     $this->seed(ServiceSeeder::class);
 
-    expect(Service::count())->toBe(6)
-        ->and(Sample::count())->toBe(21);
+    expect(Service::count())->toBe(7)
+        ->and(Sample::count())->toBe(24);
 });

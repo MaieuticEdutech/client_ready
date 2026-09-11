@@ -181,7 +181,7 @@ This project has domain-specific skills available in `**/skills/**`. You MUST ac
 
 # Maieutic — Client Ready
 
-A small marketing site: six lines of work, each with a handful of samples.
+A small marketing site: seven lines of work, each with a handful of samples.
 Not a full portfolio; the client asked for exactly this and nothing more.
 
 ## Stack
@@ -198,8 +198,8 @@ Page views wrap components in a layout addressed with a namespace separator:
 
 ## Domain
 
-`Service` has many `Sample`. The six services are seeded: Articulate,
-Infographics, Animation, AI Videos, Smart Board, Motion Graphics. A sample
+`Service` has many `Sample`. The seven services are seeded: Articulate,
+Infographics, Animation, AI Videos, Smart Board, Motion Graphics, Swayam. A sample
 may carry a `category` (a sub-heading within its service, e.g. "2D Animation"
 and "3D Animation" under Animation); the home page splits a service's grid
 under those headings when any of its samples has one. Each
