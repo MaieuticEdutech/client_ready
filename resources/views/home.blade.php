@@ -158,4 +158,6 @@
     </main>
 
     <x-site-footer />
+
+    <x-film-player />
 </x-layouts::app>

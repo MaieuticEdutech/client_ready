@@ -79,6 +79,24 @@ it('plays an uploaded film on the card', function () {
         ->assertDontSee('Footage coming soon');
 });
 
+it('opens an uploaded film in the page player on click', function () {
+    $service = Service::factory()->create(['name' => 'Animation']);
+    $sample = Sample::factory()->for($service)->uploaded()->create(['title' => 'Blood Vessel']);
+
+    $this->get('/')
+        ->assertSee('id="player"', false)
+        ->assertSee('data-play-kind="file"', false)
+        ->assertSee('data-play-src="'.$sample->source().'"', false)
+        ->assertSee('aria-label="Play Blood Vessel"', false);
+});
+
+it('keeps a pending slot inert rather than clickable', function () {
+    $service = Service::factory()->create();
+    Sample::factory()->for($service)->create();
+
+    $this->get('/')->assertDontSee('data-play-kind', false);
+});
+
 it('embeds a pasted youtube link instead of a video tag', function () {
     $service = Service::factory()->create();
     Sample::factory()->for($service)->youtube()->create();

@@ -8,7 +8,7 @@
 {{-- The splash follows the cursor: pointer position is written straight to two
      custom properties, so the wash tracks the hand without a re-render. --}}
 <figure
-    class="sample-card reveal group relative overflow-hidden rounded-2xl bg-ink-900 ring-1 ring-ink-900/10 transition duration-500 ease-out hover:-translate-y-1.5 hover:ring-ink-900/20"
+    class="sample-card reveal group relative overflow-hidden rounded-2xl bg-ink-900 ring-1 ring-ink-900/10 transition duration-500 ease-out hover:-translate-y-1.5 hover:ring-ink-900/20 {{ $sample->isUploaded() ? 'cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal' : '' }}"
     style="--from: {{ $service->accent_from }}; --to: {{ $service->accent_to }}"
     x-data
     x-on:pointermove="
@@ -19,6 +19,17 @@
     @if ($sample->isUploaded())
         x-on:pointerenter="if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) $refs.film?.play()"
         x-on:pointerleave="if ($refs.film) { $refs.film.pause(); $refs.film.currentTime = 0 }"
+        {{-- Click (or Enter) opens the film large in the page's player --}}
+        data-play
+        data-play-kind="file"
+        data-play-src="{{ $sample->source() }}"
+        data-play-poster="{{ $sample->thumbnailUrl() }}"
+        data-play-title="{{ $sample->title }}"
+        data-play-meta="{{ collect([$service->name, $sample->client, $sample->duration_label])->filter()->implode('  ·  ') }}"
+        data-play-from="{{ $service->accent_from }}"
+        role="button"
+        tabindex="0"
+        aria-label="Play {{ $sample->title }}"
     @endif
 >
     <div class="relative aspect-video w-full overflow-hidden">
