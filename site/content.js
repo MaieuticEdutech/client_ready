@@ -25,9 +25,7 @@
  */
 export const videos = [
     // Articulate
-    { service: 'articulate', title: 'Compliance module walkthrough', client: '', duration: '', src: '', poster: '' },
-    { service: 'articulate', title: 'Onboarding course', client: '', duration: '', src: '', poster: '' },
-    { service: 'articulate', title: 'Assessment interaction', client: '', duration: '', src: '', poster: '' },
+    { service: 'articulate', title: 'Introduction to Semiotic Analysis', client: '', duration: '', src: '', poster: '' },
 
     // Infographics
     { service: 'infographics', title: 'Advance Settings', client: '', duration: '', src: '', poster: '' },

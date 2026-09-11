@@ -22,7 +22,7 @@ class ServiceSeeder extends Seeder
             'tagline' => 'Storyline and Rise builds that people finish',
             'description' => 'Interactive courses authored in Articulate Storyline and Rise, from scripting and screen design through to SCORM packaging and LMS handover.',
             'accent' => ['#15D9A1', '#00615C'],
-            'samples' => ['Compliance module walkthrough', 'Onboarding course', 'Assessment interaction'],
+            'samples' => ['Introduction to Semiotic Analysis'],
         ],
         [
             'name' => 'Infographics',

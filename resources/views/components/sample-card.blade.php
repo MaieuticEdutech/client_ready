@@ -39,6 +39,13 @@
         <span aria-hidden="true" class="sample-gloss pointer-events-none absolute inset-0"></span>
         <span aria-hidden="true" class="sample-shine pointer-events-none absolute inset-0"></span>
 
+        {{-- A still from the film sits under the preview, so the card shows the
+             work itself rather than a bare colour wash before anyone hovers. --}}
+        @if ($sample->isUploaded() && $sample->thumbnailUrl())
+            <img src="{{ $sample->thumbnailUrl() }}" alt="" loading="lazy" decoding="async" class="absolute inset-0 size-full object-cover">
+            <span aria-hidden="true" class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent"></span>
+        @endif
+
         @if ($sample->isUploaded())
             <video
                 x-ref="film"
