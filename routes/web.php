@@ -24,6 +24,7 @@ Route::prefix('studio')->name('admin.')->group(function () {
 
     Route::middleware('auth')->group(function () {
         Route::view('/', 'admin.dashboard')->name('dashboard');
+        Route::view('/samples', 'admin.samples')->name('samples');
 
         Route::post('/logout', function (Request $request) {
             Auth::logout();

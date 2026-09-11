@@ -22,7 +22,17 @@
         @endforeach
     </div>
 
-    <div class="mt-8 rounded-2xl border border-dashed border-white/10 p-8 text-center">
-        <p class="text-sm text-white/50">Sample management lands here next.</p>
+    <div class="mt-8 rounded-2xl border border-white/10 bg-ink-800 p-8 text-center">
+        <p class="text-sm text-white/50">
+            {{ $stats['pending'] }} {{ Str::plural('sample', $stats['pending']) }} still {{ $stats['pending'] === 1 ? 'needs' : 'need' }} footage.
+        </p>
+
+        <a
+            href="{{ route('admin.samples') }}"
+            wire:navigate
+            class="mt-4 inline-block rounded-lg bg-brand-teal/20 px-4 py-2 text-sm font-medium text-brand-mint transition hover:bg-brand-teal/30"
+        >
+            Manage samples
+        </a>
     </div>
 </div>

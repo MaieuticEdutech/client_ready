@@ -24,6 +24,18 @@
                         <span class="ml-1 rounded bg-brand-teal/20 px-1.5 py-0.5 text-[10px] uppercase tracking-wider text-brand-mint">Studio</span>
                     </a>
 
+                    <a
+                        href="{{ route('admin.samples') }}"
+                        wire:navigate
+                        @class([
+                            'text-sm transition hover:text-white',
+                            'text-white' => request()->routeIs('admin.samples'),
+                            'text-white/40' => ! request()->routeIs('admin.samples'),
+                        ])
+                    >
+                        Samples
+                    </a>
+
                     <a href="{{ route('home') }}" class="text-sm text-white/40 transition hover:text-white">
                         View site
                     </a>
