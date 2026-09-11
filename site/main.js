@@ -556,7 +556,10 @@ function initPlayer() {
 
 document.getElementById('jump-list').innerHTML = services
     .map((service) => `
-        <a href="#${service.slug}" class="rounded-full border border-ink-900/12 bg-white px-4 py-2 text-sm font-medium text-ink-900/65 transition hover:border-brand-teal/50 hover:text-brand-teal">${escapeHtml(service.name)}</a>`)
+        <a href="#${service.slug}" class="group/chip inline-flex items-center gap-2.5 rounded-full bg-ink-900/[0.07] px-4 py-2.5 text-sm font-semibold text-ink-900/80 ring-1 ring-ink-900/10 transition duration-300 ease-out hover:-translate-y-0.5 hover:bg-ink-900 hover:text-white hover:shadow-lg hover:shadow-ink-900/15 hover:ring-ink-900">
+            <span aria-hidden="true" class="size-2 shrink-0 rounded-full ring-2 ring-white/70 transition group-hover/chip:scale-125" style="background: linear-gradient(135deg, ${service.accent[0]}, ${service.accent[1]})"></span>
+            ${escapeHtml(service.name)}
+        </a>`)
     .join('')
 
 document.getElementById('stats').innerHTML = stats.map(statCard).join('')
