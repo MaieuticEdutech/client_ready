@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Maieutic — What we make</title>
+        <meta name="description" content="Video production for education and enterprise brands: Articulate courses, infographics, 2D and 3D animation, AI presenters, smart boards and motion graphics.">
+        <meta name="theme-color" content="#ffffff">
+
+        <meta property="og:title" content="Maieutic — What we make">
+        <meta property="og:description" content="Six ways we make learning move. Interactive courses, animation, synthetic presenters and motion design, produced end to end.">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="/images/maieutic-logo.webp">
+
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+        <link rel="preconnect" href="https://fonts.bunny.net">
+        <link rel="stylesheet" href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600,700&display=swap">
+
+        <script type="module" src="/main.js"></script>
+    </head>
+    <body class="min-h-screen bg-white antialiased">
+        <!-- Hero -->
+        <header class="relative overflow-hidden border-b border-ink-900/10">
+            <div aria-hidden="true" class="pointer-events-none absolute inset-0 -z-10">
+                <div class="hero-drift-one absolute -left-32 -top-40 size-[38rem] rounded-full bg-brand-mint/12 blur-3xl"></div>
+                <div class="hero-drift-two absolute -right-24 -top-10 size-[32rem] rounded-full bg-brand-peach/15 blur-3xl"></div>
+                <div class="hero-drift-three absolute left-1/2 top-1/3 size-[28rem] -translate-x-1/2 rounded-full bg-brand-aqua/10 blur-3xl"></div>
+            </div>
+
+            <!-- Top bar: the company mark sits top left -->
+            <div class="mx-auto flex max-w-7xl items-center justify-start px-5 pt-6 sm:px-8 sm:pt-8">
+                <a href="/" class="inline-block transition hover:opacity-80" aria-label="Maieutic Edutech home">
+                    <img src="/images/maieutic-logo.webp" alt="Maieutic Edutech" class="h-11 w-auto sm:h-14" width="1600" height="525" fetchpriority="high">
+                </a>
+            </div>
+
+            <div class="mx-auto max-w-7xl px-5 pb-20 pt-12 sm:px-8 sm:pb-28 sm:pt-14 lg:grid lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-14 xl:gap-20">
+                <div>
+                    <p class="reveal text-xs font-semibold uppercase tracking-[0.3em] text-brand-teal">Maieutic &mdash; The art of drawing out knowledge</p>
+
+                    <h1 class="reveal mt-6 text-balance text-5xl font-bold leading-[1.02] tracking-tight text-ink-900 sm:text-6xl xl:text-7xl" style="--reveal-delay: 80ms">
+                        Watch ideas
+                        <span class="bg-gradient-to-r from-brand-mint via-brand-teal to-brand-deep bg-clip-text text-transparent">come to life.</span>
+                    </h1>
+
+                    <p class="reveal mt-8 max-w-2xl text-lg leading-relaxed text-ink-900/60" style="--reveal-delay: 160ms">
+                        A curated look at how we turn complex training into content people actually remember &mdash;
+                        interactive courses, AI presenters, and motion design, crafted end to end for education and enterprise.
+                    </p>
+
+                    <!-- Jump list doubles as the table of contents; filled from content.js -->
+                    <nav id="jump-list" class="reveal mt-12 flex flex-wrap gap-2" aria-label="Our work" style="--reveal-delay: 240ms"></nav>
+                </div>
+
+                <!-- About panel: the company at a glance, its numbers climbing into place on arrival -->
+                <aside
+                    class="about-panel reveal relative mt-14 overflow-hidden rounded-[2rem] p-7 text-white shadow-2xl shadow-brand-deep/20 sm:p-10 lg:mt-0"
+                    style="--reveal-delay: 320ms"
+                    aria-labelledby="about-title"
+                >
+                    <div aria-hidden="true" class="pointer-events-none absolute inset-0">
+                        <span class="absolute -right-20 -top-24 size-72 rounded-full bg-brand-mint/25 blur-3xl"></span>
+                        <span class="absolute -bottom-24 -left-16 size-64 rounded-full bg-brand-coral/20 blur-3xl"></span>
+                        <svg class="about-orbit absolute -right-14 -top-14 size-64 text-white/15" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="100" cy="100" r="82" stroke-dasharray="3 12" />
+                            <circle cx="100" cy="100" r="56" stroke-dasharray="2 8" opacity="0.6" />
+                        </svg>
+                    </div>
+
+                    <div class="relative">
+                        <p class="text-[11px] font-semibold uppercase tracking-[0.28em] text-brand-mint">Who we are</p>
+                        <h2 id="about-title" class="mt-3 font-serif text-3xl font-semibold leading-tight sm:text-4xl">Maieutic Edutech</h2>
+                        <p class="mt-4 max-w-md text-sm leading-relaxed text-white/75 sm:text-base">
+                            Founded in 2018 and headquartered in Bengaluru, Maieutic is a leading eLearning solutions company
+                            committed to transforming digital learning experiences &mdash; bridging the gap between learning
+                            and real-world application.
+                        </p>
+
+                        <!-- The numbers, built like sample cards; filled from content.js -->
+                        <dl id="stats" class="mt-8 grid grid-cols-2 gap-3 sm:gap-4"></dl>
+                    </div>
+                </aside>
+            </div>
+        </header>
+
+        <!-- The six sections, rendered from content.js -->
+        <main id="work"></main>
+
+        <!-- Footer, rendered from content.js -->
+        <div id="site-footer"></div>
+
+        <!-- The player -->
+        <dialog id="player" class="player" aria-labelledby="player-title">
+            <div class="player-frame relative aspect-video w-full overflow-hidden rounded-2xl bg-black" data-player-frame></div>
+
+            <div class="mt-4 flex items-start justify-between gap-6 px-1">
+                <div class="min-w-0">
+                    <p id="player-title" class="truncate text-lg font-semibold text-white" data-player-title></p>
+                    <p class="mt-0.5 truncate text-sm text-white/55" data-player-meta></p>
+                </div>
+
+                <button
+                    type="button"
+                    data-player-close
+                    class="flex shrink-0 items-center gap-2 rounded-full border border-white/15 px-4 py-2 text-sm font-medium text-white/80 transition hover:border-white/40 hover:text-white"
+                >
+                    Close
+                    <svg viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" /></svg>
+                </button>
+            </div>
+        </dialog>
+    </body>
+</html>

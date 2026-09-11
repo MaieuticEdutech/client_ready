@@ -1,0 +1,7 @@
+# Only the static site is deployed. Everything Laravel stays local.
+/*
+!/site
+!/package.json
+!/package-lock.json
+!/vite.site.config.js
+!/vercel.json
