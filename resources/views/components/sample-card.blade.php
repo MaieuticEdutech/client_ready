@@ -8,7 +8,7 @@
 {{-- The splash follows the cursor: pointer position is written straight to two
      custom properties, so the wash tracks the hand without a re-render. --}}
 <figure
-    class="reveal group relative overflow-hidden rounded-2xl bg-ink-900 ring-1 ring-ink-900/10 transition duration-500 ease-out hover:-translate-y-1.5 hover:shadow-2xl hover:ring-ink-900/20"
+    class="sample-card reveal group relative overflow-hidden rounded-2xl bg-ink-900 ring-1 ring-ink-900/10 transition duration-500 ease-out hover:-translate-y-1.5 hover:ring-ink-900/20"
     style="--from: {{ $service->accent_from }}; --to: {{ $service->accent_to }}"
     x-data
     x-on:pointermove="
@@ -25,6 +25,7 @@
         <span aria-hidden="true" class="absolute inset-0 opacity-90" style="background: {{ $service->gradient() }}"></span>
         <span aria-hidden="true" class="sample-splash absolute inset-0 mix-blend-screen"></span>
         <span aria-hidden="true" class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent"></span>
+        <span aria-hidden="true" class="sample-gloss pointer-events-none absolute inset-0"></span>
         <span aria-hidden="true" class="sample-shine pointer-events-none absolute inset-0"></span>
 
         @if ($sample->isUploaded())

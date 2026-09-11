@@ -11,10 +11,10 @@ it('gives each discipline its own motif', function (string $name, string $marker
         ->toContain($marker);
 })->with([
     ['Articulate', 'motif-branch'],
-    ['2D Animation', 'motif-frame'],
-    ['3D Animation', 'motif-spin'],
+    ['Infographics', 'motif-arc'],
+    ['Animation', 'motif-frame'],
     ['AI Videos', 'motif-cell'],
-    ['Storyboarding', 'motif-panel'],
+    ['Smart Board', 'motif-panel'],
     ['Motion Graphics', 'motif-bar'],
 ]);
 
@@ -41,6 +41,16 @@ it('renders a motif for every section on the page', function () {
     expect(substr_count($html, 'motif-splash'))->toBe(6);
 });
 
+it('lacquers every card with a gloss layer', function () {
+    $service = Service::factory()->create();
+    Sample::factory()->for($service)->count(2)->create();
+
+    $html = $this->get('/')->getContent();
+
+    expect(substr_count($html, 'sample-gloss'))->toBe(2)
+        ->and(substr_count($html, 'sample-shine'))->toBe(2);
+});
+
 it('washes a card with its service colour under the cursor', function () {
     $service = Service::factory()->create(['accent_from' => '#F8847E']);
     Sample::factory()->for($service)->create();
@@ -57,7 +67,7 @@ it('stills every motif for reduced-motion users', function () {
 
     $block = substr($css, strpos($css, 'prefers-reduced-motion'));
 
-    foreach (['motif-ring', 'motif-spin', 'motif-cell', 'motif-bar', 'sample-shine'] as $hook) {
+    foreach (['motif-ring', 'motif-arc', 'motif-frame', 'motif-cell', 'motif-panel', 'motif-bar', 'sample-shine'] as $hook) {
         expect($block)->toContain($hook);
     }
 });

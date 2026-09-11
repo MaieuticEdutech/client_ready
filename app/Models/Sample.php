@@ -12,7 +12,7 @@ class Sample extends Model
     use HasFactory;
 
     protected $fillable = [
-        'service_id', 'title', 'client', 'video_url', 'video_path',
+        'service_id', 'title', 'category', 'client', 'video_url', 'video_path',
         'thumbnail_path', 'duration_label', 'sort_order',
     ];
 

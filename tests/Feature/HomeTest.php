@@ -4,12 +4,29 @@ use App\Models\Sample;
 use App\Models\Service;
 
 it('lists every published service in order', function () {
-    Service::factory()->create(['name' => 'Storyboarding', 'sort_order' => 1]);
+    Service::factory()->create(['name' => 'Smart Board', 'sort_order' => 1]);
     Service::factory()->create(['name' => 'Articulate', 'sort_order' => 0]);
 
     $this->get('/')
         ->assertOk()
-        ->assertSeeInOrder(['Articulate', 'Storyboarding']);
+        ->assertSeeInOrder(['Articulate', 'Smart Board']);
+});
+
+it('carries the company mark in the header and a white one in the footer', function () {
+    $this->get('/')
+        ->assertOk()
+        ->assertSee('images/maieutic-logo.webp', false)
+        ->assertSee('images/maieutic-logo-white.png', false)
+        ->assertSee('Maieutic Edutech Pvt Ltd')
+        ->assertSee('careers@maieuticedutech.com')
+        ->assertSee('https://maieuticedutech.com/solutions', false);
+});
+
+it('introduces the company beside the hero with its numbers', function () {
+    $this->get('/')
+        ->assertSee('Maieutic Edutech')
+        ->assertSee('Founded in 2018 and headquartered in Bengaluru')
+        ->assertSeeInOrder(['Founded in Bengaluru', 'data-count="2018"', 'Clients', 'data-count="50"', 'University OPM Partnerships', 'data-count="1"', 'In-House Multidisciplinary Team', 'data-count="100"'], false);
 });
 
 it('hides an unpublished service', function () {
@@ -22,11 +39,28 @@ it('hides an unpublished service', function () {
 });
 
 it('shows a service its own samples in order', function () {
-    $service = Service::factory()->create(['name' => '2D Animation']);
+    $service = Service::factory()->create(['name' => 'Animation']);
     Sample::factory()->for($service)->create(['title' => 'Second Piece', 'sort_order' => 2]);
     Sample::factory()->for($service)->create(['title' => 'First Piece', 'sort_order' => 1]);
 
     $this->get('/')->assertSeeInOrder(['First Piece', 'Second Piece']);
+});
+
+it('splits a service into sub-headings when its samples are categorised', function () {
+    $service = Service::factory()->create(['name' => 'Animation']);
+    Sample::factory()->for($service)->create(['title' => 'Product teardown', 'category' => '3D Animation', 'sort_order' => 2]);
+    Sample::factory()->for($service)->create(['title' => 'Concept explainer', 'category' => '2D Animation', 'sort_order' => 1]);
+
+    $this->get('/')->assertSeeInOrder(['Animation', '2D Animation', 'Concept explainer', '3D Animation', 'Product teardown']);
+});
+
+it('shows no sub-headings for a service without categories', function () {
+    $service = Service::factory()->create(['name' => 'Articulate']);
+    Sample::factory()->for($service)->create(['title' => 'Onboarding course']);
+
+    $this->get('/')
+        ->assertSee('Onboarding course')
+        ->assertDontSee('>More<', false);
 });
 
 it('says plainly when a sample has no footage', function () {

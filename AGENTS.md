@@ -199,7 +199,10 @@ Page views wrap components in a layout addressed with a namespace separator:
 ## Domain
 
 `Service` has many `Sample`. The six services are seeded: Articulate,
-2D Animation, 3D Animation, AI Videos, Storyboarding, Motion Graphics. Each
+Infographics, Animation, AI Videos, Smart Board, Motion Graphics. A sample
+may carry a `category` (a sub-heading within its service, e.g. "2D Animation"
+and "3D Animation" under Animation); the home page splits a service's grid
+under those headings when any of its samples has one. Each
 carries its own two-stop gradient, used for section accents and card washes.
 
 A sample is either an uploaded file (`video_path`) or a pasted YouTube/Vimeo

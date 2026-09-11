@@ -2,9 +2,9 @@
 
 {{--
     A motif per service, built from the discipline itself rather than from
-    decoration: branching nodes for Articulate, onion-skinned frames for 2D,
-    a wireframe solid for 3D, a resolving sample grid for AI, sequenced panels
-    for storyboards, kinetic bars for motion graphics.
+    decoration: branching nodes for Articulate, sweeping arcs for infographics,
+    onion-skinned frames for animation, a resolving sample grid for AI,
+    sequenced panels for smart boards, kinetic bars for motion graphics.
 
     All geometry and CSS keyframes - no asset, no dependency - and each inherits
     the service's own two stops so no two sections share a palette.
@@ -31,21 +31,25 @@
                 <circle class="motif-node motif-node-3" cx="160" cy="130" r="7" fill="currentColor" stroke="none" />
                 @break
 
-            @case('2d-animation')
+            @case('infographics')
+                {{-- Arcs sweep round a ring, a plot line draws through its points --}}
+                <g class="motif-arcs" style="transform-origin: 100px 100px">
+                    <circle class="motif-arc motif-arc-1" cx="100" cy="100" r="62" stroke-width="9" stroke-dasharray="140 390" transform="rotate(-90 100 100)" />
+                    <circle class="motif-arc motif-arc-2" cx="100" cy="100" r="62" stroke-width="9" stroke-dasharray="100 390" transform="rotate(50 100 100)" opacity="0.7" />
+                    <circle class="motif-arc motif-arc-3" cx="100" cy="100" r="62" stroke-width="9" stroke-dasharray="70 390" transform="rotate(150 100 100)" opacity="0.45" />
+                </g>
+                <path class="motif-plot" d="M70 118l16-16 14 9 18-24 12 7" stroke-width="2.5" />
+                <circle class="motif-dot motif-dot-1" cx="86" cy="102" r="4.5" fill="currentColor" stroke="none" />
+                <circle class="motif-dot motif-dot-2" cx="118" cy="87" r="4.5" fill="currentColor" stroke="none" />
+                <circle class="motif-dot motif-dot-3" cx="130" cy="94" r="4.5" fill="currentColor" stroke="none" />
+                @break
+
+            @case('animation')
                 {{-- Onion-skinned frames, each a step behind the last --}}
                 <rect class="motif-frame motif-frame-3" x="34" y="46" width="108" height="108" rx="8" />
                 <rect class="motif-frame motif-frame-2" x="48" y="46" width="108" height="108" rx="8" />
                 <rect class="motif-frame motif-frame-1" x="62" y="46" width="108" height="108" rx="8" />
                 <path class="motif-stroke" d="M74 128c14-46 42-58 70-24" stroke-width="2.5" />
-                @break
-
-            @case('3d-animation')
-                {{-- A wireframe solid turning on its axis --}}
-                <g class="motif-spin" style="transform-origin: 100px 100px">
-                    <path d="M100 34 46 66v68l54 32 54-32V66l-54-32Z" />
-                    <path d="M100 34v68m0 0 54-36m-54 36-54-36m54 36v64" />
-                    <path d="M46 66v68l54 32 54-32V66" opacity="0.5" />
-                </g>
                 @break
 
             @case('ai-videos')
@@ -62,7 +66,7 @@
                 <path class="motif-scan" d="M32 40h136" stroke-width="2.5" />
                 @break
 
-            @case('storyboarding')
+            @case('smart-board')
                 {{-- Panels filling in, one beat at a time --}}
                 <g class="motif-panels">
                     <rect class="motif-panel motif-panel-1" x="26" y="58" width="64" height="46" rx="5" />

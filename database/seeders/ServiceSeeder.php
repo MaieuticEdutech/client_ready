@@ -10,8 +10,10 @@ use Illuminate\Support\Str;
 class ServiceSeeder extends Seeder
 {
     /**
-     * The six lines of work, each with placeholder sample slots. Real footage
-     * drops into these rows through the studio; nothing here invents a client.
+     * The six lines of work, each with placeholder sample slots. A sample is a
+     * title, or a [category, title] pair when the service splits its work under
+     * sub-headings. Real footage drops into these rows through the studio;
+     * nothing here invents a client.
      */
     private const SERVICES = [
         [
@@ -22,18 +24,25 @@ class ServiceSeeder extends Seeder
             'samples' => ['Compliance module walkthrough', 'Onboarding course', 'Assessment interaction'],
         ],
         [
-            'name' => '2D Animation',
-            'tagline' => 'Drawn, rigged and timed by hand',
-            'description' => 'Character and vector animation for explainers, campaign films and course openers, built frame by frame rather than from templates.',
-            'accent' => ['#69FFF7', '#008680'],
-            'samples' => ['Concept explainer', 'Character short', 'Campaign opener'],
+            'name' => 'Infographics',
+            'tagline' => 'Complex ideas, made legible at a glance',
+            'description' => 'Static and animated infographics that turn data, processes and policy into visuals people actually read, designed for slides, print, social and course pages alike.',
+            'accent' => ['#FFD166', '#B4530A'],
+            'samples' => ['Annual report spread', 'Process poster', 'Data story carousel'],
         ],
         [
-            'name' => '3D Animation',
-            'tagline' => 'Modelled, lit and rendered',
-            'description' => 'Product and process animation in three dimensions, for the ideas that only make sense when you can turn them around and look inside.',
-            'accent' => ['#C1FAFB', '#00615C'],
-            'samples' => ['Product teardown', 'Process visualisation', 'Environment flythrough'],
+            'name' => 'Animation',
+            'tagline' => 'Drawn by hand, modelled in depth',
+            'description' => 'Character and vector animation for explainers, campaign films and course openers, alongside product and process animation in three dimensions for the ideas that only make sense when you can turn them around and look inside.',
+            'accent' => ['#69FFF7', '#008680'],
+            'samples' => [
+                ['2D Animation', 'Concept explainer'],
+                ['2D Animation', 'Character short'],
+                ['2D Animation', 'Campaign opener'],
+                ['3D Animation', 'Product teardown'],
+                ['3D Animation', 'Process visualisation'],
+                ['3D Animation', 'Environment flythrough'],
+            ],
         ],
         [
             'name' => 'AI Videos',
@@ -43,7 +52,7 @@ class ServiceSeeder extends Seeder
             'samples' => ['Presenter-led module', 'Multilingual variant', 'Rapid update cut'],
         ],
         [
-            'name' => 'Storyboarding',
+            'name' => 'Smart Board',
             'tagline' => 'The film, before the film',
             'description' => 'Boards and animatics that settle pacing, framing and intent before a single frame is produced, so production time is spent building rather than deciding.',
             'accent' => ['#F8847E', '#800D07'],
@@ -74,10 +83,12 @@ class ServiceSeeder extends Seeder
                 ]
             );
 
-            foreach ($definition['samples'] as $index => $title) {
+            foreach ($definition['samples'] as $index => $sample) {
+                [$category, $title] = is_array($sample) ? $sample : [null, $sample];
+
                 Sample::updateOrCreate(
                     ['service_id' => $service->id, 'title' => $title],
-                    ['sort_order' => $index]
+                    ['category' => $category, 'sort_order' => $index]
                 );
             }
         }
