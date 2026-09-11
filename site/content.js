@@ -60,7 +60,7 @@ export const videos = [
 export const stats = [
     { value: '2018', suffix: '', label: 'Founded in Bengaluru', accent: ['#15D9A1', '#00615C'] },
     { value: '50', suffix: '+', label: 'Clients', accent: ['#F2AA84', '#A31009'] },
-    { value: '100', suffix: '%', label: 'In-House Multidisciplinary Team', accent: ['#F8847E', '#800D07'] },
+    { value: '100', suffix: '%', label: 'In-House Multidisciplinary Team', accent: ['#15D9A1', '#00615C'] },
 ]
 
 /**

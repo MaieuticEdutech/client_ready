@@ -19,7 +19,7 @@
 
                 <h1 class="reveal mt-6 text-balance text-5xl font-bold leading-[1.02] tracking-tight text-ink-900 sm:text-6xl xl:text-7xl" style="--reveal-delay: 80ms">
                     Watch ideas
-                    <span class="bg-gradient-to-r from-brand-mint via-brand-teal to-brand-deep bg-clip-text text-transparent">come to life.</span>
+                    <span class="bg-gradient-to-r from-brand-mint via-brand-teal to-brand-deep bg-clip-text text-transparent">come to life</span>
                 </h1>
 
                 <p class="reveal mt-8 max-w-2xl text-lg leading-relaxed text-ink-900/60" style="--reveal-delay: 160ms">
@@ -69,7 +69,7 @@
                         @foreach ([
                             ['2018', '', 'Founded in Bengaluru', '#15D9A1', '#00615C'],
                             ['50', '+', 'Clients', '#F2AA84', '#A31009'],
-                            ['100', '%', 'In-House Multidisciplinary Team', '#F8847E', '#800D07'],
+                            ['100', '%', 'In-House Multidisciplinary Team', '#15D9A1', '#00615C'],
                         ] as $i => [$value, $suffix, $label, $from, $to])
                             <div
                                 class="sample-card reveal group relative isolate flex aspect-video flex-col justify-end overflow-hidden rounded-2xl bg-ink-900 p-4 ring-1 ring-white/15 transition duration-500 ease-out hover:-translate-y-1.5 hover:ring-white/30 sm:aspect-[4/3]"
