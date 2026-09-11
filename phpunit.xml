@@ -28,6 +28,13 @@
         <env name="DB_CONNECTION" value="pgsql"/>
         <env name="DB_DATABASE" value="client_ready_test"/>
         <env name="DB_URL" value=""/>
+        <!-- Never let the suite reach live object storage. Tests that touch
+             films should use Storage::fake('films') on top of this. -->
+        <env name="FILM_DISK" value="public"/>
+        <env name="LOGO_DISK" value="public"/>
+        <env name="AWS_ACCESS_KEY_ID" value=""/>
+        <env name="AWS_SECRET_ACCESS_KEY" value=""/>
+        <env name="AWS_BUCKET" value=""/>
         <env name="MAIL_MAILER" value="array"/>
         <env name="QUEUE_CONNECTION" value="sync"/>
         <env name="SESSION_DRIVER" value="array"/>
