@@ -24,37 +24,41 @@
  * optional sub-heading within a service (Animation splits into 2D and 3D).
  */
 export const videos = [
-    // ── Articulate ──────────────────────────────────────────────────────────
+    // Articulate
     { service: 'articulate', title: 'Compliance module walkthrough', client: '', duration: '', src: '', poster: '' },
     { service: 'articulate', title: 'Onboarding course', client: '', duration: '', src: '', poster: '' },
     { service: 'articulate', title: 'Assessment interaction', client: '', duration: '', src: '', poster: '' },
 
-    // ── Infographics ────────────────────────────────────────────────────────
-    { service: 'infographics', title: 'Annual report spread', client: '', duration: '', src: '', poster: '' },
-    { service: 'infographics', title: 'Process poster', client: '', duration: '', src: '', poster: '' },
+    // Infographics
+    { service: 'infographics', title: 'Advance Settings', client: '', duration: '', src: '', poster: '' },
+    { service: 'infographics', title: 'Vision: The Golden Circle', client: '', duration: '', src: '', poster: '' },
+    { service: 'infographics', title: 'BIT WR 1.1.1.1', client: '', duration: '', src: '', poster: '' },
+    { service: 'infographics', title: 'Creating an Effective IMC Plan', client: '', duration: '', src: '', poster: '' },
 
-    // ── Animation ───────────────────────────────────────────────────────────
-    { service: 'animation', category: '2D Animation', title: 'Concept explainer', client: '', duration: '', src: '', poster: '' },
-    { service: 'animation', category: '2D Animation', title: 'Character short', client: '', duration: '', src: '', poster: '' },
-    { service: 'animation', category: '3D Animation', title: 'Product teardown', client: '', duration: '', src: '', poster: '' },
-    { service: 'animation', category: '3D Animation', title: 'Process visualisation', client: '', duration: '', src: '', poster: '' },
+    // Animation
+    { service: 'animation', category: '2D Animation', title: 'Code of Conduct', client: '', duration: '', src: '', poster: '' },
+    { service: 'animation', category: '2D Animation', title: 'IEEE', client: '', duration: '', src: '', poster: '' },
+    { service: 'animation', category: '2D Animation', title: 'NBM 2024 Presentation Deck', client: '', duration: '', src: '', poster: '' },
+    { service: 'animation', category: '2D Animation', title: 'QR Charging', client: '', duration: '', src: '', poster: '' },
+    { service: 'animation', category: '3D Animation', title: 'Blood Vessel', client: '', duration: '', src: '', poster: '' },
+    { service: 'animation', category: '3D Animation', title: 'RedFx', client: '', duration: '', src: '', poster: '' },
 
-    // ── AI Videos ───────────────────────────────────────────────────────────
-    { service: 'ai-videos', title: 'Presenter-led module', client: '', duration: '', src: '', poster: '' },
-    { service: 'ai-videos', title: 'Multilingual variant', client: '', duration: '', src: '', poster: '' },
+    // AI Videos
+    { service: 'ai-videos', title: 'AI Based Learning Sample', client: '', duration: '', src: '', poster: '' },
+    { service: 'ai-videos', title: 'Emversity EWS', client: '', duration: '', src: '', poster: '' },
 
-    // ── Smart Board ─────────────────────────────────────────────────────────
-    { service: 'smart-board', title: 'Brand film boards', client: '', duration: '', src: '', poster: '' },
-    { service: 'smart-board', title: 'Animatic pass', client: '', duration: '', src: '', poster: '' },
+    // Smart Board
+    { service: 'smart-board', title: 'Pricing Fundamentals, Methods & Strategies', client: '', duration: '', src: '', poster: '' },
 
-    // ── Motion Graphics ─────────────────────────────────────────────────────
-    { service: 'motion-graphics', title: 'Title sequence', client: '', duration: '', src: '', poster: '' },
-    { service: 'motion-graphics', title: 'Data explainer', client: '', duration: '', src: '', poster: '' },
+    // Motion Graphics
+    { service: 'motion-graphics', title: 'Adulting', client: '', duration: '', src: '', poster: '' },
+    { service: 'motion-graphics', title: 'Digital Design', client: '', duration: '', src: '', poster: '' },
+    { service: 'motion-graphics', title: 'Emerging Technologies (Hindi Dubbing)', client: '', duration: '', src: '', poster: '' },
+    { service: 'motion-graphics', title: 'IEEE Cybersecurity Intro', client: '', duration: '', src: '', poster: '' },
+    { service: 'motion-graphics', title: 'Sample Video 1', client: '', duration: '', src: '', poster: '' },
 
     // Swayam
-    { service: 'swayam', title: 'Studio lecture capture', client: '', duration: '', src: '', poster: '' },
-    { service: 'swayam', title: 'Course trailer', client: '', duration: '', src: '', poster: '' },
-    { service: 'swayam', title: 'Multi-camera session', client: '', duration: '', src: '', poster: '' },
+    { service: 'swayam', title: 'Cyber Security Course Intro', client: '', duration: '', src: '', poster: '' },
 ]
 
 /**
