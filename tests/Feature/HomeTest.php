@@ -26,7 +26,7 @@ it('introduces the company beside the hero with its numbers', function () {
     $this->get('/')
         ->assertSee('Maieutic Edutech')
         ->assertSee('Founded in 2018 and headquartered in Bengaluru')
-        ->assertSeeInOrder(['Founded in Bengaluru', 'data-count="2018"', 'Clients', 'data-count="50"', 'University OPM Partnerships', 'data-count="1"', 'In-House Multidisciplinary Team', 'data-count="100"'], false);
+        ->assertSeeInOrder(['Founded in Bengaluru', 'data-count="2018"', 'Clients', 'data-count="50"', 'In-House Multidisciplinary Team', 'data-count="100"'], false);
 });
 
 it('hides an unpublished service', function () {

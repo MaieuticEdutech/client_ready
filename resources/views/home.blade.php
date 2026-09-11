@@ -65,15 +65,14 @@
                     {{-- The numbers are built like a sample card's poster panel: one gradient
                          tile per figure, with the cursor wash, gloss and shine, and the figure
                          and its label sitting where a film's caption would. --}}
-                    <dl class="mt-8 grid grid-cols-2 gap-3 sm:gap-4">
+                    <dl class="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-3 sm:gap-4">
                         @foreach ([
                             ['2018', '', 'Founded in Bengaluru', '#15D9A1', '#00615C'],
                             ['50', '+', 'Clients', '#F2AA84', '#A31009'],
-                            ['1', '', 'University OPM Partnerships', '#69FFF7', '#008680'],
                             ['100', '%', 'In-House Multidisciplinary Team', '#F8847E', '#800D07'],
                         ] as $i => [$value, $suffix, $label, $from, $to])
                             <div
-                                class="sample-card reveal group relative isolate flex aspect-video flex-col justify-end overflow-hidden rounded-2xl bg-ink-900 p-4 ring-1 ring-white/15 transition duration-500 ease-out hover:-translate-y-1.5 hover:ring-white/30 sm:p-5"
+                                class="sample-card reveal group relative isolate flex aspect-video flex-col justify-end overflow-hidden rounded-2xl bg-ink-900 p-4 ring-1 ring-white/15 transition duration-500 ease-out hover:-translate-y-1.5 hover:ring-white/30 sm:aspect-[4/3]"
                                 style="--from: {{ $from }}; --to: {{ $to }}; --reveal-delay: {{ 420 + $i * 90 }}ms"
                                 x-data
                                 x-on:pointermove="
@@ -88,8 +87,8 @@
                                 <span aria-hidden="true" class="sample-gloss pointer-events-none absolute inset-0 -z-10"></span>
                                 <span aria-hidden="true" class="sample-shine pointer-events-none absolute inset-0 -z-10"></span>
 
-                                <dt class="order-2 mt-2 text-[11px] font-medium uppercase tracking-[0.14em] text-white/60">{{ $label }}</dt>
-                                <dd class="order-1 bg-gradient-to-r from-brand-mint to-brand-aqua bg-clip-text font-serif text-4xl font-semibold tabular-nums leading-none text-transparent sm:text-5xl">
+                                <dt class="order-2 mt-2 text-[10px] font-medium uppercase leading-snug tracking-[0.14em] text-white/60">{{ $label }}</dt>
+                                <dd class="order-1 bg-gradient-to-r from-brand-mint to-brand-aqua bg-clip-text font-serif text-4xl font-semibold tabular-nums leading-none text-transparent">
                                     <span data-count="{{ $value }}">{{ $value }}</span>{{ $suffix }}
                                 </dd>
                             </div>
