@@ -2,7 +2,7 @@
  * Everything on the page that a person might want to change lives in this
  * one file. No database, no admin: edit, save, redeploy.
  *
- * ── The fifteen videos ─────────────────────────────────────────────────────
+ * ── The videos ─────────────────────────────────────────────────────
  *
  * Each entry's `src` can be ANY ONE of:
  *
@@ -25,42 +25,42 @@
  */
 export const videos = [
     // Articulate
-    { service: 'articulate', title: 'Introduction to Semiotic Analysis', client: '', duration: '', src: '', poster: '' },
-    { service: 'articulate', title: 'Sales and Operations Planning', client: '', duration: '', src: '', poster: '' },
-    { service: 'articulate', title: 'DSU Unit 8.1', client: '', duration: '', src: '', poster: '' },
-    { service: 'articulate', title: 'DSU Unit 8.2', client: '', duration: '', src: '', poster: '' },
-    { service: 'articulate', title: 'Problem Solving using C: Unit 12.1', client: '', duration: '', src: '', poster: '' },
+    { service: 'articulate', title: 'Introduction to Semiotic Analysis', client: '', duration: '', src: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/articulate-introduction-to-semiotic-analysis.mp4', poster: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/posters/articulate-introduction-to-semiotic-analysis.jpg' },
+    { service: 'articulate', title: 'Sales and Operations Planning', client: '', duration: '', src: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/articulate-sales-and-operations-planning.mp4', poster: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/posters/articulate-sales-and-operations-planning.jpg' },
+    { service: 'articulate', title: 'DSU Unit 8.1', client: '', duration: '', src: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/articulate-dsu-unit-81.mp4', poster: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/posters/articulate-dsu-unit-81.jpg' },
+    { service: 'articulate', title: 'DSU Unit 8.2', client: '', duration: '', src: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/articulate-dsu-unit-82.mp4', poster: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/posters/articulate-dsu-unit-82.jpg' },
+    { service: 'articulate', title: 'Problem Solving using C: Unit 12.1', client: '', duration: '', src: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/articulate-problem-solving-using-c-unit-121.mp4', poster: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/posters/articulate-problem-solving-using-c-unit-121.jpg' },
 
     // Infographics
-    { service: 'infographics', title: 'Advance Settings', client: '', duration: '', src: '', poster: '' },
-    { service: 'infographics', title: 'Vision: The Golden Circle', client: '', duration: '', src: '', poster: '' },
-    { service: 'infographics', title: 'BIT WR 1.1.1.1', client: '', duration: '', src: '', poster: '' },
-    { service: 'infographics', title: 'Creating an Effective IMC Plan', client: '', duration: '', src: '', poster: '' },
+    { service: 'infographics', title: 'Advance Settings', client: '', duration: '', src: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/infographics-advance-settings.mp4', poster: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/posters/infographics-advance-settings.jpg' },
+    { service: 'infographics', title: 'Vision: The Golden Circle', client: '', duration: '', src: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/infographics-vision-the-golden-circle.mp4', poster: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/posters/infographics-vision-the-golden-circle.jpg' },
+    { service: 'infographics', title: 'BIT WR 1.1.1.1', client: '', duration: '', src: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/infographics-bit-wr-1111.mp4', poster: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/posters/infographics-bit-wr-1111.jpg' },
+    { service: 'infographics', title: 'Creating an Effective IMC Plan', client: '', duration: '', src: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/infographics-creating-an-effective-imc-plan.mp4', poster: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/posters/infographics-creating-an-effective-imc-plan.jpg' },
 
     // Animation
-    { service: 'animation', category: '2D Animation', title: 'Code of Conduct', client: '', duration: '', src: '', poster: '' },
-    { service: 'animation', category: '2D Animation', title: 'IEEE', client: '', duration: '', src: '', poster: '' },
-    { service: 'animation', category: '2D Animation', title: 'NBM 2024 Presentation Deck', client: '', duration: '', src: '', poster: '' },
-    { service: 'animation', category: '2D Animation', title: 'QR Charging', client: '', duration: '', src: '', poster: '' },
-    { service: 'animation', category: '3D Animation', title: 'Blood Vessel', client: '', duration: '', src: '', poster: '' },
-    { service: 'animation', category: '3D Animation', title: 'RedFx', client: '', duration: '', src: '', poster: '' },
+    { service: 'animation', category: '2D Animation', title: 'Code of Conduct', client: '', duration: '', src: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/animation-code-of-conduct.mp4', poster: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/posters/animation-code-of-conduct.jpg' },
+    { service: 'animation', category: '2D Animation', title: 'IEEE', client: '', duration: '', src: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/animation-ieee.mp4', poster: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/posters/animation-ieee.jpg' },
+    { service: 'animation', category: '2D Animation', title: 'NBM 2024 Presentation Deck', client: '', duration: '', src: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/animation-nbm-2024-presentation-deck.mp4', poster: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/posters/animation-nbm-2024-presentation-deck.jpg' },
+    { service: 'animation', category: '2D Animation', title: 'QR Charging', client: '', duration: '', src: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/animation-qr-charging.mp4', poster: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/posters/animation-qr-charging.jpg' },
+    { service: 'animation', category: '3D Animation', title: 'Blood Vessel', client: '', duration: '', src: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/animation-blood-vessel.mp4', poster: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/posters/animation-blood-vessel.jpg' },
+    { service: 'animation', category: '3D Animation', title: 'RedFx', client: '', duration: '', src: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/animation-redfx.mp4', poster: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/posters/animation-redfx.jpg' },
 
     // AI Videos
-    { service: 'ai-videos', title: 'AI Based Learning Sample', client: '', duration: '', src: '', poster: '' },
-    { service: 'ai-videos', title: 'Emversity EWS', client: '', duration: '', src: '', poster: '' },
+    { service: 'ai-videos', title: 'AI Based Learning Sample', client: '', duration: '', src: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/ai-videos-ai-based-learning-sample.mp4', poster: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/posters/ai-videos-ai-based-learning-sample.jpg' },
+    { service: 'ai-videos', title: 'Emversity EWS', client: '', duration: '', src: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/ai-videos-emversity-ews.mp4', poster: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/posters/ai-videos-emversity-ews.jpg' },
 
     // Smart Board
-    { service: 'smart-board', title: 'Pricing Fundamentals, Methods & Strategies', client: '', duration: '', src: '', poster: '' },
+    { service: 'smart-board', title: 'Pricing Fundamentals, Methods & Strategies', client: '', duration: '', src: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/smart-board-pricing-fundamentals-methods-strategies.mp4', poster: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/posters/smart-board-pricing-fundamentals-methods-strategies.jpg' },
 
     // Motion Graphics
-    { service: 'motion-graphics', title: 'Adulting', client: '', duration: '', src: '', poster: '' },
-    { service: 'motion-graphics', title: 'Digital Design', client: '', duration: '', src: '', poster: '' },
-    { service: 'motion-graphics', title: 'Emerging Technologies (Hindi Dubbing)', client: '', duration: '', src: '', poster: '' },
-    { service: 'motion-graphics', title: 'IEEE Cybersecurity Intro', client: '', duration: '', src: '', poster: '' },
-    { service: 'motion-graphics', title: 'Sample Video 1', client: '', duration: '', src: '', poster: '' },
+    { service: 'motion-graphics', title: 'Adulting', client: '', duration: '', src: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/motion-graphics-adulting.mp4', poster: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/posters/motion-graphics-adulting.jpg' },
+    { service: 'motion-graphics', title: 'Digital Design', client: '', duration: '', src: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/motion-graphics-digital-design.mp4', poster: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/posters/motion-graphics-digital-design.jpg' },
+    { service: 'motion-graphics', title: 'Emerging Technologies (Hindi Dubbing)', client: '', duration: '', src: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/motion-graphics-emerging-technologies-hindi-dubbing.mp4', poster: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/posters/motion-graphics-emerging-technologies-hindi-dubbing.jpg' },
+    { service: 'motion-graphics', title: 'IEEE Cybersecurity Intro', client: '', duration: '', src: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/motion-graphics-ieee-cybersecurity-intro.mp4', poster: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/posters/motion-graphics-ieee-cybersecurity-intro.jpg' },
+    { service: 'motion-graphics', title: 'Sample Video 1', client: '', duration: '', src: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/motion-graphics-sample-video-1.mp4', poster: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/posters/motion-graphics-sample-video-1.jpg' },
 
     // Swayam
-    { service: 'swayam', title: 'Cyber Security Course Intro', client: '', duration: '', src: '', poster: '' },
+    { service: 'swayam', title: 'Cyber Security Course Intro', client: '', duration: '', src: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/swayam-cyber-security-course-intro.mp4', poster: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/posters/swayam-cyber-security-course-intro.jpg' },
 ]
 
 /**
