@@ -43,5 +43,5 @@ it('seeds the seven lines of work exactly once', function () {
     $this->seed(ServiceSeeder::class);
 
     expect(Service::count())->toBe(7)
-        ->and(Sample::count())->toBe(20);
+        ->and(Sample::count())->toBe(26);
 });
