@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FilmController;
 use App\Models\Service;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -10,6 +11,12 @@ Route::get('/', function () {
         'services' => Service::published()->inOrder()->with('samples')->get(),
     ]);
 })->name('home');
+
+// Films on a local disk stream through PHP so byte ranges work everywhere,
+// including the built-in dev server, which ignores Range on static files.
+Route::get('/films/{path}', FilmController::class)
+    ->where('path', '[A-Za-z0-9._-]+')
+    ->name('films.show');
 
 /*
 |--------------------------------------------------------------------------

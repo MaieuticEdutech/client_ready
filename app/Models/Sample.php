@@ -35,11 +35,22 @@ class Sample extends Model
      */
     public function source(): ?string
     {
-        if ($this->isUploaded()) {
-            return Storage::disk(config('filesystems.films'))->url($this->video_path);
+        if (! $this->isUploaded()) {
+            return $this->video_url;
         }
 
-        return $this->video_url;
+        // A local disk streams through the app so byte ranges are honoured;
+        // object storage answers ranges itself and is linked directly.
+        if ($this->filmsDiskIsLocal()) {
+            return route('films.show', ['path' => basename($this->video_path)]);
+        }
+
+        return Storage::disk(config('filesystems.films'))->url($this->video_path);
+    }
+
+    private function filmsDiskIsLocal(): bool
+    {
+        return config('filesystems.disks.'.config('filesystems.films').'.driver') === 'local';
     }
 
     public function thumbnailUrl(): ?string
