@@ -22,7 +22,7 @@ class ServiceSeeder extends Seeder
             'tagline' => 'Storyline and Rise builds that people finish',
             'description' => 'Interactive courses authored in Articulate Storyline and Rise, from scripting and screen design through to SCORM packaging and LMS handover.',
             'accent' => ['#15D9A1', '#00615C'],
-            'samples' => ['Introduction to Semiotic Analysis', 'Sales and Operations Planning', 'DSU Unit 8.1', 'DSU Unit 8.2', 'Problem Solving using C: Unit 12.1', 'Problem Solving using C: Unit 12.2', 'Problem Solving using C: Unit 12.3'],
+            'samples' => ['Introduction to Semiotic Analysis', 'Sales and Operations Planning', 'DSU Unit 8.1', 'DSU Unit 8.2', 'Problem Solving using C: Unit 12.1'],
         ],
         [
             'name' => 'Infographics',

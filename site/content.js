@@ -30,8 +30,6 @@ export const videos = [
     { service: 'articulate', title: 'DSU Unit 8.1', client: '', duration: '', src: '', poster: '' },
     { service: 'articulate', title: 'DSU Unit 8.2', client: '', duration: '', src: '', poster: '' },
     { service: 'articulate', title: 'Problem Solving using C: Unit 12.1', client: '', duration: '', src: '', poster: '' },
-    { service: 'articulate', title: 'Problem Solving using C: Unit 12.2', client: '', duration: '', src: '', poster: '' },
-    { service: 'articulate', title: 'Problem Solving using C: Unit 12.3', client: '', duration: '', src: '', poster: '' },
 
     // Infographics
     { service: 'infographics', title: 'Advance Settings', client: '', duration: '', src: '', poster: '' },
