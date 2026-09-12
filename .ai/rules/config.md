@@ -11,7 +11,9 @@ The s3 disk sets `throw => false`, so a failed `put()` returns false instead of 
 
 Never treat "no exception" as proof a write to the films disk worked — check the return value, or wrap the call so the studio surfaces a real error to the user. This masked a total TLS failure during the R2 bring-up and made a dead connection look healthy.
 
-## Keep Livewire temporary uploads off the s3 disk
-Leave `livewire.temporary_file_upload.disk` unset so temp uploads land on the local disk and only the final `store()` does a server-side PutObject to R2.
+## Livewire direct-to-R2 uploads do work — the ACL worry was unfounded
+`LIVEWIRE_TEMPORARY_FILE_UPLOAD_DISK=s3` makes Livewire sign a presigned PUT carrying `x-amz-acl: private` (see `GenerateSignedUploadUrl::forS3`). That was assumed to break R2, because R2 does not implement ACLs.
 
-Setting `LIVEWIRE_TEMPORARY_FILE_UPLOAD_DISK=s3` makes Livewire sign presigned upload URLs that carry an ACL header. R2 does not implement ACLs and rejects them. Tempting to reach for given the 2GB upload cap, but it will break uploads — this path has never been exercised against the live bucket.
+Tested against the dev bucket on 2026-09-12: R2 returned **200 and stored the object**. It tolerates the `private` ACL; it is `public-read` that R2 rejects, and Livewire never sends that.
+
+So this is safe to turn on, and worth it in production — large films then upload straight to the bucket instead of through PHP. It additionally needs a bucket CORS policy allowing PUT from the site's origin, which the PHP-side test above did not exercise.
