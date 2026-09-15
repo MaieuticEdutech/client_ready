@@ -39,9 +39,9 @@ export const videos = [
     { service: 'infographics', title: 'Vision: The Golden Circle', client: '', duration: '', src: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/infographics-vision-the-golden-circle.mp4', poster: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/posters/infographics-vision-the-golden-circle.jpg' },
     { service: 'infographics', title: 'BIT WR 1.1.1.1', client: '', duration: '', src: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/infographics-bit-wr-1111.mp4', poster: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/posters/infographics-bit-wr-1111.jpg' },
     { service: 'infographics', title: 'Creating an Effective IMC Plan', client: '', duration: '', src: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/infographics-creating-an-effective-imc-plan.mp4', poster: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/posters/infographics-creating-an-effective-imc-plan.jpg' },
-    { service: 'infographics', title: 'Introduction to Semiotic Analysis', client: 'Alliance University', duration: '', src: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/articulate-introduction-to-semiotic-analysis.mp4', poster: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/posters/articulate-introduction-to-semiotic-analysis.jpg' },
-    { service: 'infographics', title: 'DSU Unit 8.1', client: 'Dayananda Sagar University', duration: '', src: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/articulate-dsu-unit-81.mp4', poster: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/posters/articulate-dsu-unit-81.jpg' },
-    { service: 'infographics', title: 'Problem Solving using C: Unit 12.1', client: 'REVA University', duration: '', src: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/articulate-problem-solving-using-c-unit-121.mp4', poster: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/posters/articulate-problem-solving-using-c-unit-121.jpg' },
+    { service: 'infographics', title: 'Alliance University', client: '', duration: '', src: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/articulate-introduction-to-semiotic-analysis.mp4', poster: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/posters/articulate-introduction-to-semiotic-analysis.jpg' },
+    { service: 'infographics', title: 'Dayananda Sagar University', client: '', duration: '', src: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/articulate-dsu-unit-81.mp4', poster: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/posters/articulate-dsu-unit-81.jpg' },
+    { service: 'infographics', title: 'REVA University', client: '', duration: '', src: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/articulate-problem-solving-using-c-unit-121.mp4', poster: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/posters/articulate-problem-solving-using-c-unit-121.jpg' },
 
     // Animation
     { service: 'animation', category: '2D Animation', title: 'Code of Conduct', client: '', duration: '', src: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/animation-code-of-conduct.mp4', poster: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/posters/animation-code-of-conduct.jpg' },
@@ -68,6 +68,9 @@ export const videos = [
     // Articulate — courses, opened by link. Paste each course's share URL into `link`.
     { service: 'articulate', title: 'Sales and Operations Planning', link: '' },
     { service: 'articulate', title: 'DSU Unit 8.2', link: '' },
+    { service: 'articulate', title: 'Data Cleaning Tasks', link: 'https://360.articulate.com/review/content/5b643c1a-df38-45fa-a90c-b0be85857cea/review' },
+    { service: 'articulate', title: 'Creating Dynamic Dashboards', link: 'https://360.articulate.com/review/content/ed567850-c2af-4137-a8ad-24ebbc1a9edf/review' },
+    { service: 'articulate', title: 'Rise Mahindra', link: 'https://360.articulate.com/review/content/0fbcd3f0-266b-4630-a3fc-4d736fa1d09d/review' },
 
     // Swayam
     { service: 'swayam', title: 'Cyber Security Course Intro', client: '', duration: '', src: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/swayam-cyber-security-course-intro.mp4', poster: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/posters/swayam-cyber-security-course-intro.jpg' },
