@@ -22,7 +22,7 @@ class ServiceSeeder extends Seeder
             'tagline' => 'Complex ideas, made legible at a glance',
             'description' => 'Static and animated infographics that turn data, processes and policy into visuals people actually read, designed for slides, print, social and course pages alike.',
             'accent' => ['#FFD166', '#B4530A'],
-            'samples' => ['Advance Settings', 'Vision: The Golden Circle', 'BIT WR 1.1.1.1', 'Creating an Effective IMC Plan'],
+            'samples' => ['Advance Settings', 'Vision: The Golden Circle', 'BIT WR 1.1.1.1', 'Creating an Effective IMC Plan', 'Introduction to Semiotic Analysis', 'DSU Unit 8.1', 'Problem Solving using C: Unit 12.1'],
         ],
         [
             'name' => 'Animation',
@@ -64,7 +64,7 @@ class ServiceSeeder extends Seeder
             'tagline' => 'Storyline and Rise builds that people finish',
             'description' => 'Interactive courses authored in Articulate Storyline and Rise, from scripting and screen design through to SCORM packaging and LMS handover.',
             'accent' => ['#15D9A1', '#00615C'],
-            'samples' => ['Introduction to Semiotic Analysis', 'Sales and Operations Planning', 'DSU Unit 8.1', 'DSU Unit 8.2', 'Problem Solving using C: Unit 12.1'],
+            'samples' => ['Sales and Operations Planning', 'DSU Unit 8.2'],
         ],
         [
             'name' => 'Swayam',
