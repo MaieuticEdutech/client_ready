@@ -316,6 +316,11 @@
     .play-button { animation: play-breathe 2.8s ease-out infinite; }
     .group:hover .play-button { animation: none; }
 
+    /* Link cards share the play button's breath; the arrow nudges out on hover. */
+    .link-button { animation: play-breathe 2.8s ease-out infinite; }
+    .group:hover .link-button { animation: none; }
+    .group:hover .link-button svg { transform: translate(2px, -2px); }
+
     @media (prefers-reduced-motion: reduce) {
         .hero-drift-one,
         .hero-drift-two,
@@ -325,7 +330,7 @@
 
         .motif-ring, .motif-branch, .motif-node, .motif-arc, .motif-plot, .motif-dot,
         .motif-frame, .motif-stroke, .motif-cell, .motif-scan, .motif-panel, .motif-sketch,
-        .motif-bar, .motif-orbit, .motif-wave, .motif-play-mark, .about-orbit, .sample-shine, .play-button { animation: none; }
+        .motif-bar, .motif-orbit, .motif-wave, .motif-play-mark, .about-orbit, .sample-shine, .play-button, .link-button { animation: none; }
 
         .motif-splash, .motif-art, .sample-splash { transition: none; }
         .player[open] { animation: none; }

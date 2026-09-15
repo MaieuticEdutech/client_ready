@@ -18,13 +18,6 @@ class ServiceSeeder extends Seeder
      */
     private const SERVICES = [
         [
-            'name' => 'Articulate',
-            'tagline' => 'Storyline and Rise builds that people finish',
-            'description' => 'Interactive courses authored in Articulate Storyline and Rise, from scripting and screen design through to SCORM packaging and LMS handover.',
-            'accent' => ['#15D9A1', '#00615C'],
-            'samples' => ['Introduction to Semiotic Analysis', 'Sales and Operations Planning', 'DSU Unit 8.1', 'DSU Unit 8.2', 'Problem Solving using C: Unit 12.1'],
-        ],
-        [
             'name' => 'Infographics',
             'tagline' => 'Complex ideas, made legible at a glance',
             'description' => 'Static and animated infographics that turn data, processes and policy into visuals people actually read, designed for slides, print, social and course pages alike.',
@@ -65,6 +58,13 @@ class ServiceSeeder extends Seeder
             'description' => 'Titles, lower thirds, data visualisation and brand systems in motion, for films that need to look like they belong to someone.',
             'accent' => ['#FEF1DE', '#A31009'],
             'samples' => ['Adulting', 'Digital Design', 'Emerging Technologies (Hindi Dubbing)', 'IEEE Cybersecurity Intro', 'Sample Video 1'],
+        ],
+        [
+            'name' => 'Articulate',
+            'tagline' => 'Storyline and Rise builds that people finish',
+            'description' => 'Interactive courses authored in Articulate Storyline and Rise, from scripting and screen design through to SCORM packaging and LMS handover.',
+            'accent' => ['#15D9A1', '#00615C'],
+            'samples' => ['Introduction to Semiotic Analysis', 'Sales and Operations Planning', 'DSU Unit 8.1', 'DSU Unit 8.2', 'Problem Solving using C: Unit 12.1'],
         ],
         [
             'name' => 'Swayam',

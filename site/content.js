@@ -22,15 +22,18 @@
  *
  * `service` must match one of the slugs in SERVICES below. `category` is an
  * optional sub-heading within a service (Animation splits into 2D and 3D).
+ *
+ * ── Link-only services ─────────────────────────────────────────────
+ *
+ * A service marked `kind: 'links'` in SERVICES (Articulate) shows courses,
+ * not films. Its entries carry a `link` instead of a `src`:
+ *
+ *   { service: 'articulate', title: 'Sales and Operations Planning', link: 'https://rise.articulate.com/share/...' }
+ *
+ * The card opens the link in a new tab. Leave `link` as '' and the card says
+ * "Link coming soon".
  */
 export const videos = [
-    // Articulate
-    { service: 'articulate', title: 'Introduction to Semiotic Analysis', client: '', duration: '', src: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/articulate-introduction-to-semiotic-analysis.mp4', poster: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/posters/articulate-introduction-to-semiotic-analysis.jpg' },
-    { service: 'articulate', title: 'Sales and Operations Planning', client: '', duration: '', src: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/articulate-sales-and-operations-planning.mp4', poster: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/posters/articulate-sales-and-operations-planning.jpg' },
-    { service: 'articulate', title: 'DSU Unit 8.1', client: '', duration: '', src: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/articulate-dsu-unit-81.mp4', poster: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/posters/articulate-dsu-unit-81.jpg' },
-    { service: 'articulate', title: 'DSU Unit 8.2', client: '', duration: '', src: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/articulate-dsu-unit-82.mp4', poster: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/posters/articulate-dsu-unit-82.jpg' },
-    { service: 'articulate', title: 'Problem Solving using C: Unit 12.1', client: '', duration: '', src: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/articulate-problem-solving-using-c-unit-121.mp4', poster: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/posters/articulate-problem-solving-using-c-unit-121.jpg' },
-
     // Infographics
     { service: 'infographics', title: 'Advance Settings', client: '', duration: '', src: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/infographics-advance-settings.mp4', poster: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/posters/infographics-advance-settings.jpg' },
     { service: 'infographics', title: 'Vision: The Golden Circle', client: '', duration: '', src: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/infographics-vision-the-golden-circle.mp4', poster: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/posters/infographics-vision-the-golden-circle.jpg' },
@@ -59,6 +62,13 @@ export const videos = [
     { service: 'motion-graphics', title: 'IEEE Cybersecurity Intro', client: '', duration: '', src: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/motion-graphics-ieee-cybersecurity-intro.mp4', poster: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/posters/motion-graphics-ieee-cybersecurity-intro.jpg' },
     { service: 'motion-graphics', title: 'Sample Video 1', client: '', duration: '', src: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/motion-graphics-sample-video-1.mp4', poster: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/posters/motion-graphics-sample-video-1.jpg' },
 
+    // Articulate — courses, opened by link. Paste each course's share URL into `link`.
+    { service: 'articulate', title: 'Introduction to Semiotic Analysis', link: '' },
+    { service: 'articulate', title: 'Sales and Operations Planning', link: '' },
+    { service: 'articulate', title: 'DSU Unit 8.1', link: '' },
+    { service: 'articulate', title: 'DSU Unit 8.2', link: '' },
+    { service: 'articulate', title: 'Problem Solving using C: Unit 12.1', link: '' },
+
     // Swayam
     { service: 'swayam', title: 'Cyber Security Course Intro', client: '', duration: '', src: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/swayam-cyber-security-course-intro.mp4', poster: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/posters/swayam-cyber-security-course-intro.jpg' },
 ]
@@ -75,17 +85,11 @@ export const stats = [
 ]
 
 /**
- * The seven lines of work. Order here is the order on the page. Each carries
+ * The seven lines of work. Order here is the order on the page. A service with
+ * `kind: 'links'` shows courses opened by link rather than films. Each carries
  * its own two colour stops, used for the section accent and the card washes.
  */
 export const services = [
-    {
-        slug: 'articulate',
-        name: 'Articulate',
-        tagline: 'Storyline and Rise builds that people finish',
-        description: 'Interactive courses authored in Articulate Storyline and Rise, from scripting and screen design through to SCORM packaging and LMS handover.',
-        accent: ['#15D9A1', '#00615C'],
-    },
     {
         slug: 'infographics',
         name: 'Infographics',
@@ -120,6 +124,14 @@ export const services = [
         tagline: 'Type, data and identity in motion',
         description: 'Titles, lower thirds, data visualisation and brand systems in motion, for films that need to look like they belong to someone.',
         accent: ['#FEF1DE', '#A31009'],
+    },
+    {
+        slug: 'articulate',
+        kind: 'links',
+        name: 'Articulate',
+        tagline: 'Storyline and Rise builds that people finish',
+        description: 'Interactive courses authored in Articulate Storyline and Rise, from scripting and screen design through to SCORM packaging and LMS handover.',
+        accent: ['#15D9A1', '#00615C'],
     },
     {
         slug: 'swayam',
