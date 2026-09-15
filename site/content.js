@@ -66,8 +66,6 @@ export const videos = [
     { service: 'motion-graphics', title: 'Sample Video 1', client: '', duration: '', src: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/motion-graphics-sample-video-1.mp4', poster: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/posters/motion-graphics-sample-video-1.jpg' },
 
     // Articulate — courses, opened by link. Paste each course's share URL into `link`.
-    { service: 'articulate', title: 'Sales and Operations Planning', link: '' },
-    { service: 'articulate', title: 'DSU Unit 8.2', link: '' },
     { service: 'articulate', title: 'Data Cleaning Tasks', link: 'https://360.articulate.com/review/content/5b643c1a-df38-45fa-a90c-b0be85857cea/review' },
     { service: 'articulate', title: 'Creating Dynamic Dashboards', link: 'https://360.articulate.com/review/content/ed567850-c2af-4137-a8ad-24ebbc1a9edf/review' },
     { service: 'articulate', title: 'Rise Mahindra', link: 'https://360.articulate.com/review/content/0fbcd3f0-266b-4630-a3fc-4d736fa1d09d/review' },
