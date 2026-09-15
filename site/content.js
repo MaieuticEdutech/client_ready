@@ -31,7 +31,9 @@
  *   { service: 'articulate', title: 'Sales and Operations Planning', link: 'https://rise.articulate.com/share/...' }
  *
  * The card opens the link in a new tab. Leave `link` as '' and the card says
- * "Link coming soon".
+ * "Link coming soon". `poster` works the same as it does for a film - drop a
+ * JPG in site/public/posters/ and reference it as 'posters/name.jpg' - and is
+ * shown in place of the generic course-slide frame when set.
  */
 export const videos = [
     // Infographics
@@ -66,9 +68,9 @@ export const videos = [
     { service: 'motion-graphics', title: 'Sample Video 1', client: '', duration: '', src: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/motion-graphics-sample-video-1.mp4', poster: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/posters/motion-graphics-sample-video-1.jpg' },
 
     // Articulate — courses, opened by link. Paste each course's share URL into `link`.
-    { service: 'articulate', title: 'Data Cleaning Tasks', link: 'https://360.articulate.com/review/content/5b643c1a-df38-45fa-a90c-b0be85857cea/review' },
-    { service: 'articulate', title: 'Creating Dynamic Dashboards', link: 'https://360.articulate.com/review/content/ed567850-c2af-4137-a8ad-24ebbc1a9edf/review' },
-    { service: 'articulate', title: 'Rise Mahindra', link: 'https://360.articulate.com/review/content/0fbcd3f0-266b-4630-a3fc-4d736fa1d09d/review' },
+    { service: 'articulate', title: 'Data Cleaning Tasks', link: 'https://360.articulate.com/review/content/5b643c1a-df38-45fa-a90c-b0be85857cea/review', poster: 'posters/articulate-data-cleaning-tasks.jpg' },
+    { service: 'articulate', title: 'Creating Dynamic Dashboards', link: 'https://360.articulate.com/review/content/ed567850-c2af-4137-a8ad-24ebbc1a9edf/review', poster: 'posters/articulate-creating-dynamic-dashboards.jpg' },
+    { service: 'articulate', title: 'Rise Mahindra', link: 'https://360.articulate.com/review/content/0fbcd3f0-266b-4630-a3fc-4d736fa1d09d/review', poster: 'posters/articulate-rise-mahindra.jpg' },
 
     // Swayam
     { service: 'swayam', title: 'Cyber Security Course Intro', client: '', duration: '', src: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/swayam-cyber-security-course-intro.mp4', poster: 'https://pub-fbba415a5af44e0dbcd4c54f49b8d921.r2.dev/films/posters/swayam-cyber-security-course-intro.jpg' },

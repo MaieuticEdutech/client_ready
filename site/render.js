@@ -174,9 +174,13 @@ export function linkCard(video, service, index) {
     const host = pending ? '' : linkHost(href)
     const title = escapeHtml(video.title)
     const client = escapeHtml(video.client)
+    const poster = resolveAsset(video.poster)
 
-    // A faint Storyline-style slide: title bar, two content blocks, a progress track.
-    const frame = `
+    // A real screenshot of the course when one is supplied; otherwise a faint
+    // Storyline-style slide stands in, so the card is never a flat blank.
+    const frame = poster
+        ? `<img src="${escapeHtml(poster)}" alt="" loading="lazy" decoding="async" class="absolute inset-0 size-full object-cover transition duration-700 ease-out group-hover:scale-[1.04]">`
+        : `
         <svg aria-hidden="true" viewBox="0 0 320 180" class="absolute inset-0 size-full text-white/20 transition duration-700 ease-out group-hover:scale-[1.04] group-hover:text-white/30" fill="none" stroke="currentColor" stroke-width="1.5">
             <rect x="56" y="30" width="208" height="120" rx="8" />
             <path d="M56 50h208" />
