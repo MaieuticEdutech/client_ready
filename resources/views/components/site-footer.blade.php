@@ -14,16 +14,12 @@
         ],
         'Company' => [
             ['Who We Are', $site.'/About-Us'],
-            ['Our Vision', $site.'/About-Us'],
-            ['Our Mission', $site.'/About-Us'],
-            ['Our Impact', $site.'/About-Us'],
             ['Our Clients', $site.'/clients'],
             ['Careers', $site.'/careers'],
             ['Gallery', $site.'/gallery'],
         ],
         'Resources' => [
             ['Blogs & Insights', $site.'/resources/blogs-insights'],
-            ['Case Studies', $site.'/resources/case-studies'],
             ['FAQs', $site.'/faqs'],
         ],
         'Contact Us' => [

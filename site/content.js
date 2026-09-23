@@ -173,18 +173,18 @@ export const company = {
             ['Video Based Learning', 'https://maieuticedutech.com/solutions/video-based-learning'],
             ['2D / 3D / Motion Graphics', 'https://maieuticedutech.com/solutions/2d-3d-motion-graphics'],
         ],
+        // /About-Us, not /about-us: the main site 301s the lowercase path to
+        // /whoweare, which its router has no route for, so the link 404s. That
+        // redirect rule is case-sensitive and React Router is not, so this
+        // spelling reaches the page. Revert once the redirect is fixed.
         'Company': [
             ['Who We Are', 'https://maieuticedutech.com/About-Us'],
-            ['Our Vision', 'https://maieuticedutech.com/About-Us'],
-            ['Our Mission', 'https://maieuticedutech.com/About-Us'],
-            ['Our Impact', 'https://maieuticedutech.com/solutions'],
             ['Our Clients', 'https://maieuticedutech.com/clients'],
             ['Careers', 'https://maieuticedutech.com/careers'],
             ['Gallery', 'https://maieuticedutech.com/gallery'],
         ],
         'Resources': [
             ['Blogs & Insights', 'https://maieuticedutech.com/resources/blogs-insights'],
-            ['Case Studies', 'https://maieuticedutech.com/resources/case-studies'],
             ['FAQs', 'https://maieuticedutech.com/faqs'],
         ],
         'Contact Us': [
