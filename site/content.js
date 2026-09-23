@@ -164,34 +164,34 @@ export const company = {
     ],
     columns: {
         'Solutions': [
-            ['All Solutions', '/solutions'],
-            ['Content Design & Development', '/solutions/content-design-development'],
-            ['Marketing, Digital Products & Network', '/solutions/marketing-digital-products'],
-            ['Academic Delivery', '/solutions/academic-delivery-student-success'],
-            ['LMS Deployment & Management', '/solutions/lms-deployment-management'],
-            ['Interactive Models & Articulate', '/solutions/interactive-models-articulate'],
-            ['Video Based Learning', '/solutions/video-based-learning'],
-            ['2D / 3D / Motion Graphics', '/solutions/2d-3d-motion-graphics'],
+            ['All Solutions', 'https://maieuticedutech.com/solutions'],
+            ['Content Design & Development', 'https://maieuticedutech.com/solutions/content-design-development'],
+            ['Marketing, Digital Products & Network', 'https://maieuticedutech.com/solutions/marketing-digital-products'],
+            ['Academic Delivery', 'https://maieuticedutech.com/solutions/academic-delivery-student-success'],
+            ['LMS Deployment & Management', 'https://maieuticedutech.com/solutions/lms-deployment-management'],
+            ['Interactive Models & Articulate', 'https://maieuticedutech.com/solutions/interactive-models-articulate'],
+            ['Video Based Learning', 'https://maieuticedutech.com/solutions/video-based-learning'],
+            ['2D / 3D / Motion Graphics', 'https://maieuticedutech.com/solutions/2d-3d-motion-graphics'],
         ],
+        // /About-Us, not /about-us: the main site 301s the lowercase path to
+        // /whoweare, which its router has no route for, so the link 404s. That
+        // redirect rule is case-sensitive and React Router is not, so this
+        // spelling reaches the page. Revert once the redirect is fixed.
         'Company': [
-            ['Who We Are', '/about-us'],
-            ['Our Vision', '/about-us'],
-            ['Our Mission', '/about-us'],
-            ['Our Impact', '/about-us'],
-            ['Our Clients', '/clients'],
-            ['Careers', '/careers'],
-            ['Gallery', '/gallery'],
+            ['Who We Are', 'https://maieuticedutech.com/About-Us'],
+            ['Our Clients', 'https://maieuticedutech.com/clients'],
+            ['Careers', 'https://maieuticedutech.com/careers'],
+            ['Gallery', 'https://maieuticedutech.com/gallery'],
         ],
         'Resources': [
-            ['Blogs & Insights', '/resources/blogs-insights'],
-            ['Case Studies', '/resources/case-studies'],
-            ['FAQs', '/faqs'],
+            ['Blogs & Insights', 'https://maieuticedutech.com/resources/blogs-insights'],
+            ['FAQs', 'https://maieuticedutech.com/faqs'],
         ],
         'Contact Us': [
-            ['Send Us a Message', '/contact'],
+            ['Send Us a Message', 'https://maieuticedutech.com/contact'],
             ['Email Us', 'mailto:careers@maieuticedutech.com'],
             ['Call Us', 'tel:+919663727955'],
-            ['Our Location', '/contact'],
+            ['Our Location', 'https://maieuticedutech.com/contact'],
         ],
     },
 }

@@ -13,17 +13,13 @@
             ['2D / 3D / Motion Graphics', $site.'/solutions/2d-3d-motion-graphics'],
         ],
         'Company' => [
-            ['Who We Are', $site.'/about-us'],
-            ['Our Vision', $site.'/about-us'],
-            ['Our Mission', $site.'/about-us'],
-            ['Our Impact', $site.'/about-us'],
+            ['Who We Are', $site.'/About-Us'],
             ['Our Clients', $site.'/clients'],
             ['Careers', $site.'/careers'],
             ['Gallery', $site.'/gallery'],
         ],
         'Resources' => [
             ['Blogs & Insights', $site.'/resources/blogs-insights'],
-            ['Case Studies', $site.'/resources/case-studies'],
             ['FAQs', $site.'/faqs'],
         ],
         'Contact Us' => [
